@@ -12,7 +12,9 @@
     <p>Назваеие города:</p>
     <input type="text">
     <p><input type="file" name="photo" multiple accept="image/*,image/jpeg">
-        <button> save</button>
+    <div>
+        <button> Сохранить </button>
+    </div>
 </form>
 </body>
 </html>

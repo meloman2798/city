@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -9,12 +9,47 @@
     <title>Document</title>
 </head>
 <body>
-<div class="city">
-    <p><label>Kiev</label> <a href="info.php">Info</a>
-        <a href="#">Delete</a> </p>
-    <p><label>Kharkov</label> <a href="info.php">Info</a>
-        <a href="#">Delete</a></p>
+<?php
+
+require_once 'connection.php';
+
+$sql = mysqli_connect($host, $user, $password, $database);
+
+
+
+
+?>
+<div class="body">
+    <div>
+        <b>Города:</b>
+    </div>
+    <div class="city">
+        <div>
+            <p>Киев
+                <a href="info.php">Info</a>
+                <a href="#">delete</a>
+                <a href="edit.php">edit</a>
+            </p>
+        </div>
+
+        <div>
+            <p>Харьков
+                <a href="info.php">Info</a>
+                <a href="#">delete</a>
+                <a href="edit.php">edit</a>
+            </p>
+        </div>
+        <div>
+            <p>Львов
+                <a href="info.php">Info</a>
+                <a href="#">delete</a>
+                <a href="edit.php">edit</a>
+            </p>
+        </div>
+    </div>
 </div>
-<a href="create.php">Add</a>
+<div>
+    <a href="create.php">Добавить</a>
+</div>
 </body>
 </html>

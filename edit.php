@@ -8,32 +8,13 @@
     <title>Document</title>
 </head>
 <body>
-<div class="info">
-   <div>
-    <select>
-        <option></option>
-        <option></option>
-        <option></option>
-    </select>
-   </div>
+<form action="index.php" method="post">
+    <p>Назваеие города:</p>
+    <input type="text">
+    <p><input type="file" name="photo" multiple accept="image/*,image/jpeg">
     <div>
-        <input type="text" name="city">
+        <button> Сохранить </button>
     </div>
-    <div>
-        <img src="#">
-    </div>
-    <div>
-        <a href="index.php">Back</a>
-    </div>
-
-
-
-
-
-
-
-
-</div>
-
+</form>
 </body>
 </html>
