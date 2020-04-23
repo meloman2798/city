@@ -16,8 +16,6 @@ require_once 'connection.php';
 $sql = mysqli_connect($host, $user, $password, $database);
 
 
-
-
 ?>
 <div class="body">
     <div>
