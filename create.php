@@ -8,9 +8,9 @@
     <title>Document</title>
 </head>
 <body>
-<form action="index.php" method="post">
+<form action="create_city.php" method="post">
     <p>Назваеие города:</p>
-    <input type="text">
+    <input  name="name" type="text">
     <p><input type="file" name="photo" multiple accept="image/*,image/jpeg">
     <div>
         <button> Сохранить </button>

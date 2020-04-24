@@ -28,7 +28,6 @@ $result = $mysql->query($sql);
         <div>
             <?php while($row = mysqli_fetch_array($result)):;?>
             <p><?php echo $row['name']?>
-
                 <a href="info.php">Info</a>
                 <a href="#">delete</a>
                 <a href="edit.php">edit</a>
