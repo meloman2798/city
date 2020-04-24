@@ -15,45 +15,29 @@ require_once 'connection.php';
 
 $mysql = mysqli_connect($host, $user, $password, $database);
 $mysql ->set_charset("utf8");
-
 $sql = 'select id, name from City';
 $result = $mysql->query($sql);
 
-while( $row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-    echo $row['name'];
-}
-
 ?>
+
 <div class="body">
     <div>
         <b>Города:</b>
     </div>
     <div class="city">
         <div>
-            <p>
-                <?php var_dump( $row['name']) ?>
-                <a href="info.php">Info</a>
-                <a href="#">delete</a>
-                <a href="edit.php">edit</a>
-            </p>
-        </div>
+            <?php while($row = mysqli_fetch_array($result)):;?>
+            <p><?php echo $row['name']?>
 
-        <div>
-            <p><?php echo $row['name']; ?>
                 <a href="info.php">Info</a>
                 <a href="#">delete</a>
                 <a href="edit.php">edit</a>
             </p>
-        </div>
-        <div>
-            <p><?php echo $row['name']; ?>
-                <a href="info.php">Info</a>
-                <a href="#">delete</a>
-                <a href="edit.php">edit</a>
-            </p>
+            <?php endwhile;?>
         </div>
     </div>
 </div>
+
 <div>
     <a href="create.php">Добавить</a>
 </div>
