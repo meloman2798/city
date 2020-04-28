@@ -14,27 +14,34 @@
 require_once 'connection.php';
 
 $mysql = mysqli_connect($host, $user, $password, $database);
-$mysql ->set_charset("utf8");
+$mysql->set_charset("utf8");
 $sql = 'select id, name from City';
+
 $result = $mysql->query($sql);
 
 ?>
-
 <div class="body">
     <div>
         <b>Города:</b>
     </div>
     <div class="city">
         <div>
-            <?php while($row = mysqli_fetch_array($result)):;?>
-            <p><?php echo $row['name']?>
-                <a href="info.php">Info</a>
-                <a href="#">delete</a>
-                <a href="edit.php">edit</a>
-            </p>
-            <?php endwhile;?>
+            <?php while ($row = mysqli_fetch_array($result , MYSQLI_ASSOC)):?>
+                <form action="info.php" method="post">
+                    <div>
+                        <input name="id" type="hidden" value="<?= $row['id']?>">
+                        <input name="name" value="<?= $row['name']?>">
+                        <button type="submit">info</button>
+                        <a href="#">delete</a>
+                        <a href="edit.php">edit</a><br>
+                    </div>
+                </form>
+            <?php endwhile; ?>
+
         </div>
     </div>
+    </form>
+
 </div>
 
 <div>
